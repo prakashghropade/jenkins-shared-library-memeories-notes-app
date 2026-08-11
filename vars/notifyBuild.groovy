@@ -6,8 +6,8 @@ def call (Map config = [:]) {
 
     emailtext(
 
-        to: recipient
-        subject: "${status}: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+        to: recipient,
+        subject: "${status}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
         body: """
             <h2>Jenkins Build Notification</h2>
 
