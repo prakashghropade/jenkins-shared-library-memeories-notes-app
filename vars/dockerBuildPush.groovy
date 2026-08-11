@@ -42,8 +42,8 @@ def call(Map config = [:]) {
         ]) {
             
             withEnv([
-                "IMAGE_NAME"=${image}
-                "IMAGE_TAG"=${tag}
+                "IMAGE_NAME=${image}"
+                "IMAGE_TAG=${tag}"
             ]) {
 
                 sh '''
