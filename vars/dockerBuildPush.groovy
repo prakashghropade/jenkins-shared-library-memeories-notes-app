@@ -37,12 +37,12 @@ def call(Map config = [:]) {
             usernamePassword(
                 credentialsId: credentialsId,
                 usernameVariable: 'DOCKER_USERNAME',
-                passwordVariable: 'DOCKER_PASSWROD'
+                passwordVariable: 'DOCKER_PASSWORD'
             )
         ]) {
             
             withEnv([
-                "IMAGE_NAME=${image}"
+                "IMAGE_NAME=${image}",
                 "IMAGE_TAG=${tag}"
             ]) {
 
