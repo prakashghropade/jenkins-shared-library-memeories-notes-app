@@ -1,7 +1,7 @@
 def call(Map config = [:]) {
 
     def image = config.image
-    def tag = config.tag ? : "latest"
+    def tag = config.tag ?: "latest"
     def credentialsId = config.credentialsId
     def dockerfile = config.dockerfile ?: "Dockerfile"
     def context = config.context ?: "."
